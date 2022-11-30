@@ -1,2 +1,2 @@
 From devopsedu/webapp
-ADD ./website/. /usr/local/apache2/htdocs/
+ADD ./website/. /var/www/html
