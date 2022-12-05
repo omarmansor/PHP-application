@@ -9,7 +9,7 @@
         name: '*'
         state: latest
 
-    - name: Install git, python3, docker packages on test server(s)
+    - name: Install git, python3, docker, openssh-server packages on test server(s)
       yum:
         name: "{{ packages }}"
       vars:
@@ -26,7 +26,7 @@
         enabled: true
         daemon_reload: true
     
-    - name: Start and Enable the Docker daemon
+    - name: Start and Enable the openssh-server daemon
       systemd:
         name: sshd
         state: started
